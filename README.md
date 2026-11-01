@@ -1,4 +1,4 @@
-# Undangan Pernikahan Rayana & Hasna
+# Undangan Pernikahan Arkana & Nadhira
 
 Website undangan dengan taman 3D realistis (Three.js): tamu diajak berjalan menyusuri taman bersama sebuah karakter, lalu kartu undangan muncul satu per satu saat halaman digulir. RSVP & ucapan tersimpan di **Supabase**, dan link personal untuk tiap tamu.
 
@@ -60,7 +60,7 @@ Taruh file dengan nama berikut di `web/assets/`. Halaman memakainya otomatis; se
 | `pasangan.png` | Foto full-body berdua dengan **latar transparan** (PNG). Berdiri di pelaminan taman 3D. Tanpa file ini pelaminan tampil kosong |
 | `musik.mp3` | Musik latar. Tombol musik hanya muncul kalau file ini ada |
 
-Teks (nama mempelai & orang tua, alamat, rekening, tanggal) bisa diedit langsung di `index.html`. Nama di papan gerbang, buku tamu, dan neon photo booth juga ada di sana: cari "Rayana" lalu ganti semuanya.
+Teks (nama mempelai & orang tua, alamat, rekening, tanggal) bisa diedit langsung di `index.html`. Nama di papan gerbang, buku tamu, dan neon photo booth juga ada di sana: cari "Arkana" lalu ganti semuanya.
 
 ## 5. Melihat RSVP
 Supabase → **Table Editor → rsvp**. Bisa diekspor ke CSV. Rekap cepat lewat SQL Editor:
@@ -78,3 +78,11 @@ Untuk menghapus ucapan yang tidak pantas, hapus barisnya di Table Editor.
 - Sofa pelaminan (Sofa_01), lentera kuningan (Lantern_01), vas keramik (ceramic_vase_01), pot terakota (planter_pot_clay): model scan Poly Haven (CC0).
 - Kayu oak (kursi, easel, panggung), kain linen (taplak), dan batu kolam: tekstur Poly Haven oak_veneer_01, rough_linen, rock_boulder_dry (CC0).
 - Tekstur rumput, kayu, air dari contoh three.js (MIT).
+
+## Kredit foto & ornamen
+Versi promo ini memakai foto pasangan hasil AI (bukan orang sungguhan), dari beberapa pasangan berbeda:
+- Lummi (https://www.lummi.ai), lisensi Lummi: bebas untuk komersial, tanpa wajib atribusi: foto mempelai, potret berdua, dan sebagian besar galeri.
+- Pixabay (Content License, bebas komersial): galeri 14 (ID 8270974) dan galeri 15 (ID 8648871, oleh Archv).
+- Ornamen pembatas mawar (`ornamen-mawar.webp`): divider line-art Pixabay ID 4719697, diwarnai ulang rose gold.
+
+Nama mempelai, orang tua, dan nomor rekening di halaman ini fiktif untuk keperluan promo.

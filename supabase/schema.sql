@@ -1,5 +1,5 @@
 -- =========================================================
---  Undangan Rayana & Hasna — skema database Supabase
+--  Undangan Arkana & Nadhira — skema database Supabase
 --  Jalankan sekali di: Supabase Dashboard → SQL Editor → New query → Run
 -- =========================================================
 
