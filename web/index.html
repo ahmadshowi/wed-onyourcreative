@@ -148,14 +148,6 @@ button,input,textarea{font:inherit;color:inherit}
 .pair strong{display:block;font:600 27px/1.15 var(--f-display);margin-bottom:4px;color:#FFF9FA}
 .pair span{font-size:13.5px;color:rgba(255,249,250,.8);line-height:1.6;text-shadow:0 1px 12px rgba(28,16,20,.4)}
 
-/* the pond easels' prints, repeated in the card so they read at any screen size */
-.ch-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:400px}
-.ch-photos button{position:relative;display:block;margin:0;padding:0;border:0;aspect-ratio:3/4;overflow:hidden;cursor:zoom-in;background:var(--blush);border-radius:999px 999px 3px 3px;box-shadow:0 0 0 1px rgba(252,239,242,.6),0 14px 28px -10px rgba(28,16,20,.75)}
-.ch-photos button::after{content:"";position:absolute;inset:4px;border:1px solid rgba(255,249,250,.7);border-radius:999px 999px 2px 2px;pointer-events:none}
-.ch-photos img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;transition:transform 1.2s var(--ease)}
-.ch-photos button:hover img{transform:scale(1.06)}
-@media (max-width:760px){.ch-photos{gap:8px}}
-
 .ch.hero{justify-content:center;text-align:center}
 .ch.hero .card{max-width:680px;margin:0 auto;justify-items:center;gap:28px}
 .ch.hero .card::before{inset:-40px -110px}
@@ -449,12 +441,6 @@ addEventListener('pageshow', () => { if (document.body.classList.contains('touri
         <p class="kicker"><span class="rn">II</span>Galeri</p>
         <h2>Potret kami di <em>tepi kolam</em></h2>
         <p class="lead">Kebahagiaan terpancar, beriringan dengan senyum yang kami selalu rangkai.</p>
-        <div class="ch-photos" id="chPhotos">
-          <button type="button" data-i="0" aria-label="Perbesar foto 1"><img alt="" src="assets/galeri-1.jpg" decoding="async"></button>
-          <button type="button" data-i="1" aria-label="Perbesar foto 2"><img alt="" src="assets/galeri-2.jpg" decoding="async"></button>
-          <button type="button" data-i="2" aria-label="Perbesar foto 3"><img alt="" src="assets/galeri-3.jpg" decoding="async"></button>
-          <button type="button" data-i="3" aria-label="Perbesar foto 4"><img alt="" src="assets/galeri-4.jpg" decoding="async"></button>
-        </div>
       </div>
     </article>
     <article class="ch" data-label="Potret">
@@ -1639,7 +1625,6 @@ function openLB(i){ lbI=(i+GALLERY.length)%GALLERY.length;
   lb.innerHTML=`<figure><img alt="" src="${GALLERY[lbI]}"><figcaption><span>${lbI+1} / ${GALLERY.length}</span><span class="row"><button class="btn small" data-act="p" type="button">‹</button><button class="btn small" data-act="n" type="button">›</button><button class="btn small" data-act="x" type="button">Tutup</button></span></figcaption></figure>`;
   lb.hidden=false; lb.querySelector('[data-act="x"]').focus(); }
 gal.addEventListener('click',e=>{ const b=e.target.closest('button[data-i]'); if(b) openLB(+b.dataset.i); });
-$('#chPhotos').addEventListener('click',e=>{ const b=e.target.closest('button[data-i]'); if(b) openLB(+b.dataset.i); });
 addEventListener('keydown',e=>{ if(!lb||lb.hidden) return; if(e.key==='Escape') lb.hidden=true; if(e.key==='ArrowRight') openLB(lbI+1); if(e.key==='ArrowLeft') openLB(lbI-1); });
 
 /* --- calendar --- */
